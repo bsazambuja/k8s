@@ -83,10 +83,10 @@ metadata:
   name: zabbix-web-nginx-mysql
 spec:
   ports:
-  - name: "8081"
-    port: 8081
+  - name: "8443"
+    port: 8443
     targetPort: 8080
-    selector:
+  selector:
     zabbix-app: zabbix-server
 status:
   loadBalancer: {}
