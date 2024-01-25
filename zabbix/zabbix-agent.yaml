@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: monitoring
+  namespace: zabbix
   labels:
     zabbix-app: zabbix-agent
   name: zabbix-agent
