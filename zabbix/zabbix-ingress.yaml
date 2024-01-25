@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  zabbix
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: zabbix.labsecurity.dev.br
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service: 
+            name: zabbix-web-nginx-mysql
+            port:
+              number: 80
