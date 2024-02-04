@@ -5,8 +5,12 @@ metadata:
   name:  zabbix
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts: 
+    - zabbix.labsecurity.dev.br
   rules:
   - host: zabbix.labsecurity.dev.br
     http:
