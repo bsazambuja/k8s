@@ -6,12 +6,12 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    secretName: zabbix-tls
 spec:
   ingressClassName: nginx
   tls:
   - hosts: 
     - zabbix.labsecurity.dev.br
+    secretName: zabbix-tls
   rules:
   - host: zabbix.labsecurity.dev.br
     http:
